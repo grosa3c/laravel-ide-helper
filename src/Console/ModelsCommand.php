@@ -598,7 +598,7 @@ class ModelsCommand extends Command
                 $this->getTypeInModel($model, $type),
                 true,
                 true,
-                $type === 'bit' ? 'bool ' : ' ' . $column['comment'],
+                $type === 'bit' ? 'bool ' : 'bool ' . $column['comment'],
                 $column['nullable']
             );
             if ($this->write_model_magic_where) {
