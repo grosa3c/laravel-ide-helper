@@ -598,7 +598,7 @@ class ModelsCommand extends Command
                 $this->getTypeInModel($model, $type),
                 true,
                 true,
-                $column['comment'],
+                $type === 'bit' ? 'bool ' : ' ' . $column['comment'],
                 $column['nullable']
             );
             if ($this->write_model_magic_where) {
@@ -1064,7 +1064,7 @@ class ModelsCommand extends Command
                 $attr = 'property-read';
             }
 
-            $tagLine = trim("@{$attr} {$property['type']} {$name} {ciao}");
+            $tagLine = trim("@{$attr} {$property['type']} {$name} {$property['comment']}");
             $tag = Tag::createInstance($tagLine, $phpdoc);
             $phpdoc->appendTag($tag);
         }
