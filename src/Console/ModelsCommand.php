@@ -1064,7 +1064,7 @@ class ModelsCommand extends Command
                 $attr = 'property-read';
             }
 
-            $tagLine = trim("@{$attr} {$property['type']} {$name} {$property['comment']}");
+            $tagLine = trim("@{$attr} {$property['type']} {$name} {$property['comment']} bool");
             $tag = Tag::createInstance($tagLine, $phpdoc);
             $phpdoc->appendTag($tag);
         }
