@@ -598,7 +598,7 @@ class ModelsCommand extends Command
                 $this->getTypeInModel($model, $type),
                 true,
                 true,
-                $type === $column['type_name'] . $column['comment'],
+                $type === $name . $column['comment'],
                 $column['nullable']
             );
             if ($this->write_model_magic_where) {
