@@ -14,3 +14,6 @@ composer require --dev barryvdh/laravel-ide-helper:dev-master
 
 Per aggiornarlo in caso di modifiche successiva all'installazione:
 composer update barryvdh/laravel-ide-helper
+
+Per scrivere modelli:
+php artisan ide-helper:models -W
