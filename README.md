@@ -12,8 +12,11 @@ Per aggiungerlo ad un nuovo progetto (composer):
 Per aggiungerlo ad un nuovo progetto:
 composer require --dev barryvdh/laravel-ide-helper:dev-master
 
-Per aggiornarlo in caso di modifiche successiva all'installazione:
+Per aggiornarlo in caso di modifiche successive all'installazione:
 composer update barryvdh/laravel-ide-helper
 
 Per scrivere modelli:
 php artisan ide-helper:models -W
+
+Per scrivere singolo modello:
+php artisan ide-helper:models "App\Models\Post" -W
