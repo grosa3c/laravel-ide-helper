@@ -44,7 +44,7 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use App\Facades\DatabaseConnection;
+use App\Facades\DBHelper;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
@@ -159,7 +159,7 @@ class ModelsCommand extends Command
      */
     public function handle()
     {
-        DatabaseConnection::setConnection('CCN');
+        DBHelper::setConnection('CCN');
         $this->filename = $this->laravel['config']->get('ide-helper.models_filename', '_ide_helper_models.php');
         $filename = $this->option('filename') ?? $this->filename;
         $this->write = $this->option('write');
